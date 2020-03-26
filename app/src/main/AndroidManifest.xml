@@ -19,7 +19,6 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -28,23 +27,25 @@
             android:name="com.appsflyer.SingleInstallBroadcastReceiver"
             android:exported="true">
                 
-            <intent-filter>
-                         
-                <action android:name="com.android.vending.INSTALL_REFERRER" />
-                     
-            </intent-filter>
+            <!--<intent-filter>-->
+            <!--         -->
+            <!--<action android:name="com.android.vending.INSTALL_REFERRER" />-->
+            <!--     -->
+            <!--</intent-filter>-->
         </receiver>
 
         <activity android:name=".DeepLink">
-            <intent-filter  android:autoVerify="true">
+            <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="https"
-                    android:host="androidsampleapp.onelink.me"
-                    android:pathPrefix="/Pvqj" />
-            </intent-filter>
 
+                <data
+                    android:host="androidsampleapp.onelink.me"
+                    android:pathPrefix="/Pvqj"
+                    android:scheme="https" />
+            </intent-filter>
         </activity>
     </application>
 
